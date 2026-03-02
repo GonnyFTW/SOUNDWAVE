@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundWave - Spotify Mock</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <h1>SoundWave</h1>
+        <nav>
+          <a href="#">Home</a>
+          <a href="#">Search</a>
+          <a href="#">Your Library</a>
+        </nav>
+      </aside>
+
+      <main class="content">
+        <header class="top-bar">
+          <input id="searchInput" type="text" placeholder="Search songs or artists..." />
+        </header>
+
+        <section>
+          <h2>Tracks</h2>
+          <ul id="trackList" class="track-list"></ul>
+        </section>
+
+        <section class="video-panel">
+          <h2>Now Playing Video</h2>
+          <video
+            id="videoPlayer"
+            controls
+            preload="metadata"
+            poster="https://images.unsplash.com/photo-1516280440614-37939bbacd81?q=80&w=1200&auto=format&fit=crop"
+          >
+            <source
+              src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </section>
+      </main>
+    </div>
+
+    <footer class="player-bar">
+      <div class="song-meta">
+        <strong id="currentTitle">Select a track</strong>
+        <span id="currentArtist">—</span>
+      </div>
+
+      <div class="controls">
+        <button id="prevBtn" aria-label="Previous track">⏮</button>
+        <button id="playPauseBtn" aria-label="Play or pause">▶️</button>
+        <button id="nextBtn" aria-label="Next track">⏭</button>
+      </div>
+
+      <div class="sliders">
+        <label>
+          Playback
+          <input id="playbackSlider" type="range" min="0" max="100" value="0" />
+        </label>
+        <label>
+          Volume
+          <input id="volumeSlider" type="range" min="0" max="100" value="80" />
+        </label>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
